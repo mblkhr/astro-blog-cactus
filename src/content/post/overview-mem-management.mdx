@@ -1,0 +1,25 @@
+---
+title: "Overview of Memory Management in OS kernel"
+description: "Overview of Memory Management in OS kernel"
+publishDate: "25 June 2023"
+tags: ["linux", "memory management", "kernel", "hardware"]
+---
+
+import { Image } from "@astrojs/image/components";
+
+## Virtual memory, paging \& address translation
+
+Memory management is the task of managing, mapping, allocating and deallocating the memory resource of a computer system, mainly carried out by the OS kernel. In linux this includes the use of page tables, process descriptors, memory descriptors and virtual memory areas. Generally in linux, this involved the idea of address space management, which simulates or gives the illusion to separate processes of exclusive access to the address space. The accepted terminology for this is virtual memory, and achieves a level of sandboxing between the processes which is an advantage from a security concern. However, it also makes programming simpler, a process only has to worry about its specific memory mappings, except for the address range always reserved for the kernel.
+
+There are multiple levels of memory management in linux, which work in a hierarchy to provide the kernel functionalities with memory, and to provide dynamically allocated memory to application layer programs, that implement data structures with unknown sizes (at initialisation / compile time) and of dynamic nature (grow and shrink) such as a FIFO queue or LIFO linked list.
+
+<Image
+	src="src/assets/alloc-stack-bw.png"
+	alt="Memory allocation stack."
+	width={1000}
+	aspectRatio={1.2}
+    background={'#fff'}
+/>
+    
+This hierarchy can be divided into several distinct layers, forming a stack of memory allocation systems, starting with the physical layer.
+

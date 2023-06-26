@@ -1,20 +1,21 @@
+// Interface specifying information about the website
 interface SiteConfig {
-	author: string;
-	title: string;
-	description: string;
-	lang: string;
-	ogLocale: string;
-	themeColorLight: string;
-	themeColorDark: string;
+	author: string;								// author of the website
+	title: string;								// title of website
+	description: string;						// website description
+	lang: string;								// website language
+	ogLocale: string;							// the locale (time)
+	themeColorLight: string;					// the light theme hex code
+	themeColorDark: string;						// dark theme hex code
 	date: {
-		locale: string | string[] | undefined;
-		options: Intl.DateTimeFormatOptions;
+		locale: string | string[] | undefined;	// 
+		options: Intl.DateTimeFormatOptions;	//
 	};
 }
 
 export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
-	author: "Chris Williams",
+	author: "Mohamed Belkhair",
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
 	title: "Astro Theme Cactus",
 	// Meta property used as a default description meta property
