@@ -1,15 +1,17 @@
+const base = import.meta.env.BASE_URL
+
 export const MENU_LINKS = [
 	{
 		title: "Home",
-		path: "/",
+		path: `${base}`,
 	},
 	{
 		title: "About",
-		path: "/about/",
+		path: `${base}about/`,
 	},
 	{
 		title: "Blog",
-		path: "/posts/",
+		path: `${base}posts/`,
 	},
 ];
 
