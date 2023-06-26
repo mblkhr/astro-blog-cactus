@@ -8,7 +8,7 @@ import prefetch from "@astrojs/prefetch";
 // https://astro.build/config
 export default defineConfig({
 	// ! Please remember to replace the following site property with your own domain
-	site: "https://mblkhr.github.io/",
+	site: "https://mblkhr.github.io/astro-blog-cactus",
 	base: "/astro-blog-cactus",
 	markdown: {
 		shikiConfig: {
